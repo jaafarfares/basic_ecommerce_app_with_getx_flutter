@@ -2,10 +2,10 @@ import 'package:basic_ecommerce_app_with_getx/core/view_model/auth_viewmodel.dar
 import 'package:basic_ecommerce_app_with_getx/tools/constance.dart';
 import 'package:basic_ecommerce_app_with_getx/view/auth/register_screen.dart';
 import 'package:basic_ecommerce_app_with_getx/view/home_page.dart';
-import 'package:basic_ecommerce_app_with_getx/view/widgets/custom_flat_button.dart';
-import 'package:basic_ecommerce_app_with_getx/view/widgets/custom_sized_box.dart';
-import 'package:basic_ecommerce_app_with_getx/view/widgets/custom_text.dart';
-import 'package:basic_ecommerce_app_with_getx/view/widgets/custom_text_field.dart';
+import 'package:basic_ecommerce_app_with_getx/view/custom_widgets/custom_flat_button.dart';
+import 'package:basic_ecommerce_app_with_getx/view/custom_widgets/custom_sized_box.dart';
+import 'package:basic_ecommerce_app_with_getx/view/custom_widgets/custom_text.dart';
+import 'package:basic_ecommerce_app_with_getx/view/custom_widgets/custom_text_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

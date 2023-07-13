@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // widely used colors
 const primarycolor = Colors.greenAccent;
 const greycolor = Colors.grey;
+const greyshadecolor = Color.fromRGBO(240, 240, 240, 1);
 const blackcolor = Colors.black87;
 const whitecolor = Colors.white10;
 
@@ -22,3 +23,9 @@ const passwordtext = 'Password';
 const passwordhinttext = '*******************';
 const forgotpasswordtext = 'Forgot Password?';
 const useauthbuttons = 'Or Use Auh Buttons';
+
+// home page texts
+
+const categoriestext = 'Categories';
+const bestsellingtext = "Best Selling";
+const seealltext = "See All";

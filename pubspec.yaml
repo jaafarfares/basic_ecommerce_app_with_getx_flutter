@@ -21,6 +21,7 @@ dependencies:
   cloud_firestore: any
   google_sign_in: any
   flutter_facebook_auth: any
+  iconsax: ^0.0.8
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -31,4 +32,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  
+  assets:
+    - assets/
+   #- assets/fonts/

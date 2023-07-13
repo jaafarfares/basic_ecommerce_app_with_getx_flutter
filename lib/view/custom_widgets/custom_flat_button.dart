@@ -1,5 +1,5 @@
 import 'package:basic_ecommerce_app_with_getx/tools/constance.dart';
-import 'package:basic_ecommerce_app_with_getx/view/widgets/custom_text.dart';
+import 'package:basic_ecommerce_app_with_getx/view/custom_widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/get_utils.dart';
 
