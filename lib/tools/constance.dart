@@ -5,7 +5,7 @@ const primarycolor = Colors.greenAccent;
 const greycolor = Colors.grey;
 const greyshadecolor = Color.fromRGBO(240, 240, 240, 1);
 const blackcolor = Colors.black87;
-const whitecolor = Colors.white10;
+const whitecolor = Colors.white;
 
 // Login screen texts and symbols
 
@@ -29,3 +29,10 @@ const useauthbuttons = 'Or Use Auh Buttons';
 const categoriestext = 'Categories';
 const bestsellingtext = "Best Selling";
 const seealltext = "See All";
+
+// details Screen Size
+const sizetext = "Size ";
+const colortext = "Color";
+const detailstext = "Details";
+const pricetext = "PRICE ";
+const addtocardtext = "Add To Card";

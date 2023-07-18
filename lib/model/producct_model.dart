@@ -1,18 +1,18 @@
+import 'package:basic_ecommerce_app_with_getx/utils/extenstions.dart';
 import 'package:flutter/material.dart';
 
 class ProductModel {
   String? name;
   String? price;
   String? image;
-  String? color;
   String? size;
   String? description;
-
+  Color color = Colors.black;
   ProductModel({
     this.name,
     this.price,
     this.image,
-    this.color,
+    required this.color,
     this.size,
     this.description,
   });
@@ -24,7 +24,7 @@ class ProductModel {
     name = json['name'];
     price = json['price'];
     image = json['image'];
-    color = json['color'];
+    color = HexColor.fromHex(json['color']); // Use json instead of Map
     size = json['size'];
     description = json['description'];
   }

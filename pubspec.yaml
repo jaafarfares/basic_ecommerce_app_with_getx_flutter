@@ -34,4 +34,9 @@ flutter:
 
   assets:
     - assets/
-   #- assets/fonts/
+    - assets/fonts/
+
+  fonts:
+    - family: Rubik
+      fonts:
+        - asset: assets/fonts/Rubik-MediumItalic.ttf
