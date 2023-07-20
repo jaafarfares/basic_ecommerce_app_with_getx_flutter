@@ -22,6 +22,8 @@ dependencies:
   google_sign_in: any
   flutter_facebook_auth: any
   iconsax: ^0.0.8
+  sqflite: ^2.2.8+4
+  path: ^1.8.3
 dev_dependencies:
   flutter_test:
     sdk: flutter

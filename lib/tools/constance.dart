@@ -36,3 +36,17 @@ const colortext = "Color";
 const detailstext = "Details";
 const pricetext = "PRICE ";
 const addtocardtext = "Add To Card";
+
+
+
+// db tools
+
+final String tabelCartProduct = 'card';
+final String columnId = 'id';
+final String columnName = 'name';
+
+final String columnImage = 'image';
+final String columnQuantity = 'quantity';
+final String columnPrice = 'price';
+
+

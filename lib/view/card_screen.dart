@@ -1,3 +1,4 @@
+import 'package:basic_ecommerce_app_with_getx/core/view_model/card_viewmodel.dart';
 import 'package:basic_ecommerce_app_with_getx/core/view_model/controll_view_model.dart';
 import 'package:basic_ecommerce_app_with_getx/core/view_model/home_view_model.dart';
 import 'package:basic_ecommerce_app_with_getx/tools/constance.dart';
@@ -14,7 +15,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:basic_ecommerce_app_with_getx/view/home_page.dart';
 
 class CardScreen extends StatelessWidget {
-  List<String> names = <String>[
+/*   List<String> names = <String>[
     'data',
     'data 2  ',
     'data',
@@ -34,72 +35,77 @@ class CardScreen extends StatelessWidget {
     300,
     400,
     500,
-  ];
+  ]; */
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
           Expanded(
-            child: Container(
-              child: ListView.separated(
-                itemBuilder: (context, index) {
-                  return Container(
-                    height: 140,
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 140,
-                          child: Image.asset(
-                            images[index],
-                            fit: BoxFit.fill,
+            child: GetBuilder<CardViewModel>(
+              init: CardViewModel(),
+              builder: (controller) => Container(
+                child: ListView.separated(
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 140,
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 140,
+                            child: Image.network(
+                              controller.cardproductmodel[index].image!,
+                              fit: BoxFit.fill,
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 30, left: 30),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              CustomText(
-                                fontSize: 22,
-                                text: names[index],
-                              ),
-                              const CustomSizedBox(height: 7),
-                              CustomText(
-                                color: primarycolor,
-                                text: '\$  ${prices[index].toString()} ',
-                              ),
-                              const CustomSizedBox(height: 7),
-                              Container(
-                                width: 90,
-                                color: greycolor.shade200,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  //crossAxisAlignment: CrossAxisAlignment.baseline,
-                                  children: [
-                                    Icon(Icons.add),
-                                    CustomSizedBox(width: 10),
-                                    CustomText(
-                                      text: '1',
-                                    ),
-                                    CustomSizedBox(width: 10),
-                                    Container(
-                                        padding: EdgeInsets.only(bottom: 12),
-                                        child: Icon(Icons.minimize)),
-                                  ],
+                          Padding(
+                            padding: const EdgeInsets.only(top: 30, left: 30),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                CustomText(
+                                  fontSize: 22,
+                                  text:
+                                      controller.cardproductmodel[index].name!,
                                 ),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  );
-                },
-                itemCount: names.length,
-                separatorBuilder: (BuildContext context, int index) {
-                  return CustomSizedBox();
-                },
+                                const CustomSizedBox(height: 7),
+                                CustomText(
+                                  color: primarycolor,
+                                  text:
+                                      '\$  ${controller.cardproductmodel[index].price!.toString()} ',
+                                ),
+                                const CustomSizedBox(height: 7),
+                                Container(
+                                  width: 90,
+                                  color: greycolor.shade200,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    //crossAxisAlignment: CrossAxisAlignment.baseline,
+                                    children: [
+                                      Icon(Icons.add),
+                                      CustomSizedBox(width: 10),
+                                      CustomText(
+                                        text: '1',
+                                      ),
+                                      CustomSizedBox(width: 10),
+                                      Container(
+                                          padding: EdgeInsets.only(bottom: 12),
+                                          child: Icon(Icons.minimize)),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                  itemCount: controller.cardproductmodel.length,
+                  separatorBuilder: (BuildContext context, int index) {
+                    return CustomSizedBox();
+                  },
+                ),
               ),
             ),
           ),

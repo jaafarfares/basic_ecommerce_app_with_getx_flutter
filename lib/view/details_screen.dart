@@ -1,9 +1,12 @@
+import 'package:basic_ecommerce_app_with_getx/core/view_model/card_viewmodel.dart';
+import 'package:basic_ecommerce_app_with_getx/model/card_product_model.dart';
 import 'package:basic_ecommerce_app_with_getx/model/producct_model.dart';
 import 'package:basic_ecommerce_app_with_getx/tools/constance.dart';
 import 'package:basic_ecommerce_app_with_getx/view/custom_widgets/custom_flat_button.dart';
 import 'package:basic_ecommerce_app_with_getx/view/custom_widgets/custom_sized_box.dart';
 import 'package:basic_ecommerce_app_with_getx/view/custom_widgets/custom_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class DetailsScreen extends StatelessWidget {
   ProductModel model;
@@ -128,16 +131,21 @@ class DetailsScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  Container(
-                    padding: EdgeInsets.all(20),
-                    width: 180,
-                    height: 100,
-                    child: CustomButton(
-                      onPressed: () {},
-                      label: addtocardtext,
-                      backgroundColor: primarycolor.shade400,
-                      color: whitecolor,
-                      fontSize: 19,
+                  GetBuilder<CardViewModel>(
+                    init: CardViewModel(),
+                    builder: (controller) => Container(
+                      padding: EdgeInsets.all(20),
+                      width: 180,
+                      height: 100,
+                      child: CustomButton(
+                        onPressed: () {
+                          controller.addProduct(CardProductModel(quantity: 1, name: model.name, image: model.image, price: model.price));
+                        },
+                        label: addtocardtext,
+                        backgroundColor: primarycolor.shade400,
+                        color: whitecolor,
+                        fontSize: 19,
+                      ),
                     ),
                   ),
                 ],
